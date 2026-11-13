@@ -1,0 +1,62 @@
+<resources>
+    <string name="divider_service_label">MultiTasker-Splitscreen-Größen</string>
+    <string name="divider_service_summary">Legt die Größen von Splitscreens mit 3 Apps fest</string>
+    <string name="divider_service_description">One UI bietet Apps keine Möglichkeit, die Größen von drei Splitscreen-Bereichen festzulegen. Wenn du eine MultiTasker-Verknüpfung mit eigenen Größen öffnest, zieht dieser Dienst die Trennlinien des geteilten Bildschirms auf diese Größen, so wie du es mit dem Finger tun würdest.\n\nEr führt nur diese Ziehbewegungen aus, direkt nachdem sich eine Verknüpfung geöffnet hat. Er liest nicht, was auf deinem Bildschirm angezeigt wird, und sieht nicht, was du eingibst.</string>
+
+    <!-- Snackbars and toasts -->
+    <plurals name="max_apps_reached">
+        <item quantity="one">Eine Verknüpfung kann bis zu %d App enthalten</item>
+        <item quantity="other">Eine Verknüpfung kann bis zu %d Apps enthalten</item>
+    </plurals>
+    <string name="shortcuts_unsupported">Deine Startbildschirm-App akzeptiert keine Verknüpfungen von anderen Apps</string>
+    <string name="shortcut_confirm">Bestätige die Abfrage auf dem Startbildschirm, um „%1$s“ hinzuzufügen</string>
+    <string name="shortcut_refused">Die Startbildschirm-App hat die Verknüpfung abgelehnt</string>
+    <string name="apps_missing">Einige Apps dieser Verknüpfung sind nicht mehr installiert</string>
+
+    <!-- Shortcut name and actions -->
+    <string name="shortcut_name_label">Name der Verknüpfung</string>
+    <string name="shortcut_name_placeholder">Wähle zuerst Apps aus</string>
+    <string name="shortcut_name_hint">Leer lassen, um „%1$s“ zu verwenden</string>
+    <string name="try_it">Testen</string>
+    <string name="add_to_home">Hinzufügen</string>
+
+    <!-- Split preview -->
+    <string name="preview_empty_title">Wähle 2 oder 3 Apps aus</string>
+    <string name="preview_empty_body">Sie öffnen sich nebeneinander, in der hier gezeigten Reihenfolge.</string>
+    <string name="popup_badge">Pop-up</string>
+    <string name="remove_app">%1$s entfernen</string>
+    <string name="move_app_left">%1$s nach links verschieben</string>
+    <string name="move_app_right">%1$s nach rechts verschieben</string>
+    <string name="add_an_app">App hinzufügen</string>
+
+    <!-- Layout and size controls -->
+    <string name="layout_columns">Spalten</string>
+    <string name="layout_big_left">Groß links</string>
+    <string name="layout_big_right">Groß rechts</string>
+    <string name="sizes_columns">%1$s %2$d %% · %3$s %4$d %% · %5$s %6$d %%</string>
+    <string name="sizes_left_right">Links %1$d %% · Rechts %2$d %%</string>
+    <string name="sizes_top_bottom">Oben %1$d %% · Unten %2$d %%</string>
+    <string name="action_equal">Gleich groß</string>
+    <string name="action_reset">Zurücksetzen</string>
+    <string name="divider_info">Die Trennlinien rücken direkt nach dem Öffnen der Apps an ihre Position. One UI hält jeden Bereich mindestens %1$d %% breit und %2$d %% hoch.</string>
+    <string name="divider_prompt">Um die Größen von drei Apps festzulegen, aktiviere „%1$s“ unter Eingabehilfen. One UI hat dafür keine Einstellung, daher zieht MultiTasker die Trennlinien nach dem Öffnen der Apps an ihre Position. Dein Bildschirminhalt wird dabei nicht gelesen.</string>
+    <string name="open_accessibility_settings">Eingabehilfen öffnen</string>
+
+    <!-- True split card -->
+    <string name="true_split_title">Echter 3-fach-Splitscreen</string>
+    <string name="true_split_on">Drei Apps öffnen sich in drei Splitscreen-Bereichen, und du kannst die Größen festlegen.</string>
+    <string name="true_split_off">Aus: Die dritte App öffnet sich als Pop-up-Fenster über einem Splitscreen mit 2 Apps.</string>
+    <string name="true_split_note">Nutzt den internen Splitscreen-Befehl von One UI. Falls ein Update von One UI ihn entfernt, öffnen Verknüpfungen stattdessen Splitscreen + Pop-up.</string>
+    <string name="popup_title">Dritte App öffnet sich als Pop-up</string>
+    <string name="grant_explanation">Android erlaubt Apps nur, zwei Apps gleich groß nebeneinander zu öffnen. Für einen echten dritten Splitscreen-Bereich und eigene Größen erteilst du einmalig zwei Berechtigungen per ADB über einen Computer (oder mit einer App für kabelloses Debugging auf dem Smartphone):</string>
+    <string name="grant_note">Bestehende Verknüpfungen mit 3 Apps wechseln zum 3-fach-Splitscreen, sobald die Berechtigungen erteilt sind. Beim Deinstallieren der App werden sie wieder entzogen.</string>
+    <string name="adb_commands_clip_label">ADB-Befehle</string>
+    <string name="copy_commands">Befehle kopieren</string>
+
+    <!-- App picker -->
+    <string name="search_apps">Apps suchen</string>
+    <string name="no_apps_match">Keine Apps für „%1$s“ gefunden</string>
+    <string name="resize_notice">Splitscreen wird angepasst…</string>
+    <string name="resize_twice_title">Frisch gestartete Apps zweimal anpassen</string>
+    <string name="resize_twice_description">Manche Apps wie Instagram behalten nach einem Kaltstart beim ersten Anpassen ihr altes Layout. Dann werden ihre Trennlinien ein zweites Mal verschoben. Nur wenn eine App noch nicht lief; dauert etwa eine Sekunde länger.</string>
+</resources>

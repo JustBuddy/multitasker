@@ -1,0 +1,64 @@
+<resources>
+    <string name="app_name" translatable="false">MultiTasker</string>
+    <string name="divider_service_label">MultiTasker split sizes</string>
+    <string name="divider_service_summary">Sets the sizes of 3-app splits</string>
+    <string name="divider_service_description">One UI gives apps no way to set the sizes of three split-screen panes. When you open a MultiTasker shortcut with custom sizes, this service drags the split-screen dividers to those sizes, like you would with your finger.\n\nIt only performs those drags, right after a shortcut opens. It does not read what is on your screen and does not see what you type.</string>
+
+    <!-- Snackbars and toasts -->
+    <plurals name="max_apps_reached">
+        <item quantity="one">A shortcut can hold up to %d app</item>
+        <item quantity="other">A shortcut can hold up to %d apps</item>
+    </plurals>
+    <string name="shortcuts_unsupported">Your home screen app doesn\'t accept shortcuts from other apps</string>
+    <string name="shortcut_confirm">Confirm on the home screen prompt to add \"%1$s\"</string>
+    <string name="shortcut_refused">The home screen app refused the shortcut</string>
+    <string name="apps_missing">Some apps in this shortcut are no longer installed</string>
+
+    <!-- Shortcut name and actions -->
+    <string name="shortcut_name_label">Shortcut name</string>
+    <string name="shortcut_name_placeholder">Pick apps first</string>
+    <string name="shortcut_name_hint">Leave empty to use \"%1$s\"</string>
+    <string name="try_it">Try it</string>
+    <string name="add_to_home">Add to Home</string>
+
+    <!-- Split preview -->
+    <string name="preview_empty_title">Pick 2 or 3 apps</string>
+    <string name="preview_empty_body">They open side by side, in the order shown here.</string>
+    <string name="popup_badge">Pop-up</string>
+    <string name="remove_app">Remove %1$s</string>
+    <string name="move_app_left">Move %1$s left</string>
+    <string name="move_app_right">Move %1$s right</string>
+    <string name="add_an_app">Add an app</string>
+
+    <!-- Layout and size controls -->
+    <string name="layout_columns">Columns</string>
+    <string name="layout_big_left">Big left</string>
+    <string name="layout_big_right">Big right</string>
+    <string name="sizes_columns">%1$s %2$d%% · %3$s %4$d%% · %5$s %6$d%%</string>
+    <string name="sizes_left_right">Left %1$d%% · Right %2$d%%</string>
+    <string name="sizes_top_bottom">Top %1$d%% · Bottom %2$d%%</string>
+    <string name="action_equal">Equal</string>
+    <string name="action_reset">Reset</string>
+    <string name="divider_info">The dividers move into place right after the apps open. One UI keeps every pane at least %1$d%% wide and %2$d%% tall.</string>
+    <!-- %1$s is divider_service_label, the name shown in Accessibility settings. -->
+    <string name="divider_prompt">To size three apps, turn on \"%1$s\" in Accessibility. One UI has no setting for this, so MultiTasker drags the dividers into place after opening the apps. It doesn\'t read your screen.</string>
+    <string name="open_accessibility_settings">Open Accessibility settings</string>
+
+    <!-- True split card -->
+    <string name="true_split_title">True 3-way split</string>
+    <string name="true_split_on">Three apps open as three split panes, and you can set the sizes.</string>
+    <string name="true_split_off">Off: the third app opens as a pop-up window over a 2-app split.</string>
+    <string name="true_split_note">Uses One UI\'s internal split-screen command. If a One UI update removes it, shortcuts fall back to split + pop-up.</string>
+    <string name="popup_title">Third app opens as a pop-up</string>
+    <string name="grant_explanation">Android only lets apps open two apps side by side, at equal size. For a real third split pane and custom sizes, grant two permissions once over ADB from a computer (or a wireless-debugging app on the phone):</string>
+    <string name="grant_note">Existing 3-app shortcuts switch to 3-way split as soon as the grant is in place. Uninstalling the app removes the grant.</string>
+    <string name="adb_commands_clip_label">ADB commands</string>
+    <string name="copy_commands">Copy commands</string>
+
+    <!-- App picker -->
+    <string name="search_apps">Search apps</string>
+    <string name="no_apps_match">No apps match \"%1$s\"</string>
+    <string name="resize_notice">Resizing split…</string>
+    <string name="resize_twice_title">Resize freshly started apps twice</string>
+    <string name="resize_twice_description">Some apps, like Instagram, keep their old layout after their first resize when they had to start from scratch. This drags their dividers a second time. Only when an app wasn\'t already running; adds about a second.</string>
+</resources>
