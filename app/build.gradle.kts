@@ -1,13 +1,23 @@
+import java.util.Properties
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.compose)
 }
 
+// One version for the whole app, set in gradle.properties. Release tags (v1.2.3) must match it.
 val appVersion = providers.gradleProperty("multitasker.version").get()
 val appVersionCode = appVersion.split('.').map { it.toInt() }.let { (major, minor, patch) ->
     require(minor < 100 && patch < 100) { "multitasker.version parts above 99 do not fit the version code" }
     major * 10_000 + minor * 100 + patch
 }
+
+// Release signing: keystore.properties next to settings.gradle.kts locally (gitignored), or
+// SIGNING_* environment variables in CI. Without either, release builds use the debug key.
+val keystoreProperties = Properties().apply {
+    rootProject.file("keystore.properties").takeIf { it.exists() }?.inputStream()?.use { load(it) }
+}
+fun signingValue(property: String, env: String): String? = keystoreProperties.getProperty(property) ?: System.getenv(env)
 
 android {
     namespace = "wtf.buddyworks.multitasker"
@@ -21,12 +31,26 @@ android {
         versionName = appVersion
     }
 
+    signingConfigs {
+        val storeFilePath = signingValue("storeFile", "SIGNING_STORE_FILE")
+        if (storeFilePath != null) {
+            create("release") {
+                storeFile = file(storeFilePath)
+                storePassword = signingValue("storePassword", "SIGNING_STORE_PASSWORD")
+                keyAlias = signingValue("keyAlias", "SIGNING_KEY_ALIAS")
+                keyPassword = signingValue("keyPassword", "SIGNING_KEY_PASSWORD")
+            }
+        }
+    }
+
     buildTypes {
         release {
             isMinifyEnabled = true
             isShrinkResources = true
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
-            signingConfig = signingConfigs.getByName("debug")
+            signingConfig = signingConfigs.findByName("release") ?: signingConfigs.getByName("debug").also {
+                logger.warn("w: No release key (keystore.properties or SIGNING_* variables): release builds are signed with the debug key.")
+            }
         }
     }
 
