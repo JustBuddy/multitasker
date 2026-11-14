@@ -1,4 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="14" fill="#0d9488"/>
-  <text x="32" y="32" dy="0.35em" text-anchor="middle" font-family="ui-sans-serif, system-ui, -apple-system, sans-serif" font-size="32" font-weight="600" fill="#ffffff">M</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="18 18 72 72">
+  <!-- Mirrors the adaptive launcher icon (app/src/main/res/drawable/ic_launcher_foreground.xml), cropped to the visible 72dp area. -->
+  <rect x="18" y="18" width="72" height="72" rx="17" fill="#0D9488"/>
+  <path fill="#fff" d="M37,33h12a4,4 0,0 1,4 4v34a4,4 0,0 1,-4 4h-12a4,4 0,0 1,-4 -4v-34a4,4 0,0 1,4 -4z"/>
+  <path fill="#fff" fill-opacity="0.85" d="M61,33h10a4,4 0,0 1,4 4v11a4,4 0,0 1,-4 4h-10a4,4 0,0 1,-4 -4v-11a4,4 0,0 1,4 -4z"/>
+  <path fill="#fff" fill-opacity="0.7" d="M61,56h10a4,4 0,0 1,4 4v11a4,4 0,0 1,-4 4h-10a4,4 0,0 1,-4 -4v-11a4,4 0,0 1,4 -4z"/>
 </svg>
